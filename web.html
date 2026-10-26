@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Heart Disease Prediction</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Header -->
+
+        <header class="header">
+
+            <div class="icon">
+                ♥️
+            </div>
+
+            <h1>Heart Disease Predictor</h1>
+
+            <p>
+                Machine Learning Based Health Prediction System
+            </p>
+
+        </header>
+
+
+        <!-- Main Card -->
+
+        <main class="prediction-card">
+
+            <div class="card-heading">
+
+                <h2>Enter Patient Information</h2>
+
+                <p>
+                    Please enter the required health information
+                    to generate a prediction.
+                </p>
+
+            </div>
+
+
+            <form id="predictionForm">
+
+                <!-- Age -->
+
+                <div class="form-group">
+
+                    <label for="age">
+                        Age
+                    </label>
+
+                    <input
+                        type="number"
+                        id="age"
+                        placeholder="Enter age"
+                        min="1"
+                        max="120"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Sex -->
+
+                <div class="form-group">
+
+                    <label for="sex">
+                        Sex
+                    </label>
+
+                    <select id="sex" required>
+
+                        <option value="">
+                            Select sex
+                        </option>
+
+                        <option value="1">
+                            Male
+                        </option>
+
+                        <option value="0">
+                            Female
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Resting BP -->
+
+                <div class="form-group">
+
+                    <label for="resting_bp">
+                        Resting Blood Pressure
+                        <span>(mm Hg)</span>
+                    </label>
+
+                    <input
+                        type="number"
+                        id="resting_bp"
+                        placeholder="Enter resting BP"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Cholesterol -->
+
+                <div class="form-group">
+
+                    <label for="cholesterol">
+                        Cholesterol
+                        <span>(mg/dL)</span>
+                    </label>
+
+                    <input
+                        type="number"
+                        id="cholesterol"
+                        placeholder="Enter cholesterol"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Fasting Blood Sugar -->
+
+                <div class="form-group">
+
+                    <label for="fasting_bs">
+                        Fasting Blood Sugar
+                    </label>
+
+                    <select id="fasting_bs" required>
+
+                        <option value="">
+                            Select value
+                        </option>
+
+                        <option value="1">
+                            High (1)
+                        </option>
+
+                        <option value="0">
+                            Normal (0)
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Maximum Heart Rate -->
+
+                <div class="form-group">
+
+                    <label for="max_hr">
+                        Maximum Heart Rate
+                    </label>
+
+                    <input
+                        type="number"
+                        id="max_hr"
+                        placeholder="Enter maximum heart rate"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Exercise Angina -->
+
+                <div class="form-group">
+
+                    <label for="exercise_angina">
+                        Exercise Angina
+                    </label>
+
+                    <select id="exercise_angina" required>
+
+                        <option value="">
+                            Select option
+                        </option>
+
+                        <option value="0">
+                            Yes
+                        </option>
+
+                        <option value="1">
+                            No
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Oldpeak -->
+
+                <div class="form-group">
+
+                    <label for="oldpeak">
+                        Oldpeak
+                    </label>
+
+                    <input
+                        type="number"
+                        min="0"
+                        max="1"
+                        step="0.1"
+                        id="oldpeak"
+                        placeholder="Enter Oldpeak value"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Button -->
+
+                <button type="submit" class="predict-btn">
+
+                    <span>♥️</span>
+
+                    Predict Heart Disease
+
+                </button>
+
+            </form>
+
+
+            <!-- Result -->
+
+            <div id="result" class="result-box">
+
+                <h3 id="resultTitle">
+                    Prediction Result
+                </h3>
+
+                <p id="resultText">
+                    Your prediction will appear here.
+                </p>
+
+            </div>
+
+        </main>
+
+
+        <!-- Information -->
+
+        <div class="info-box">
+
+            <div class="info-icon">
+                ℹ️
+            </div>
+
+            <div>
+
+                <strong>About this prediction</strong>
+
+                <p>
+                    This prediction is generated using a Machine
+                    Learning model and should not replace professional
+                    medical advice.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
